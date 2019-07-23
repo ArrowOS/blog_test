@@ -39,5 +39,7 @@ Published 2018-07-12 by Kuber Sharma, Ganesh Varma
   - Selinux status, what is working or non-working, any other information team should know.
   - Attach two screenshots, one of About section in Settings of the ROM and the other of terminal on build complete.
 
+Have a look at some of our revised changes to the project and maintainers criteria [here](https://blog.arrowos.net/posts/a-new-approach)
+
 #### With regards
 #### ArrowOS Team
