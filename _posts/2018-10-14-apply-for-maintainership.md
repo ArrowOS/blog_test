@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: "Apply for Maintainership"
@@ -8,7 +9,7 @@ priority: 995
 ---
 
 ## How to become an official maintainer? checkout the requirements!
-Published 2018-07-12 by Kuber Sharma, Ganesh Varma
+by Kuber Sharma, Ganesh Varma
 
 #### To make your device official and be the official maintainer of ArrowOS you must fulfill all the below requirements as mentioned.
 
@@ -23,7 +24,7 @@ Published 2018-07-12 by Kuber Sharma, Ganesh Varma
 
 ## Device Requirements:
 
-  - SeLinux should be enforcing.
+  - We prefer SeLinux to be enforcing, but this is something we will evaluate based on the device and the applicant.
   - All of the Device sources must be Open Sourced. No private source shall be encouraged! 
   - All the main device functions i.e, [Camera,Data, Voice Calling,WiFi, Hotspot, Bluetooth (and Fingerprint, NFC, Sensors etc if applicable)] should all be working to be fit for the use as a daily driver.
   - Device sources should be maintained to not have any errors during upstream updates & changes for the proper functioning of automated Jenkins builds. 
@@ -39,7 +40,26 @@ Published 2018-07-12 by Kuber Sharma, Ganesh Varma
   - Selinux status, what is working or non-working, any other information team should know.
   - Attach two screenshots, one of About section in Settings of the ROM and the other of terminal on build complete.
 
-Have a look at some of our revised changes to the project and maintainers criteria [here](https://blog.arrowos.net/posts/a-new-approach)
+We can take sometime to get back to you so please be patient
+### Benefits
+The maintainers will now be given few privileges, handing them full control over to Jenkins to initiate a test build anytime so that there will be more preliminary checks done before the official releases. 
+
+We are also looking forward in seeing more active contributors, which will open the opportunity for them to become a part of Core Team. Our doors are now wide open for all contributors. The criteria to get into ArrowOS Squad will be judged upon how useful and error-free those contributions are to the project keeping in mind maintaining code integrity and ownerships to those commits respectively.
+
+### Procedure after being selected to be a part of ArrowOS Team
+
+* Follow the instruction and agree to the Terms and Conditions mentioned in the mail
+* Make a commit and add your device in [arrow.devices](https://github.com/ArrowOS/android_vendor_arrow/blob/arrow-9.x/arrow.devices)
+> codename buildtype
+> for example: z2_plus userdebug 
+* Make a commit to add your name and your device's name in the [team page of the website](https://github.com/ArrowOS/web)
+
+* Make a [devices blog post](https://github.com/ArrowOS/devices_wiki/tree/arrow/_posts) 
+> see other device posts for example and do it a similar way
+
+***NOTE:*** *The changes you make above should be pushed to our gerrit for review. Pull requests are not accepted*
+
+*HAVE A LOOK:* [Guide on how to submit patches to gerrit](https://blog.arrowos.net/posts/gerrit-guide)
 
 #### With regards
 #### ArrowOS Team
