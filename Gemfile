@@ -5,7 +5,7 @@ gem "html-proofer"
 gem "image_optim"
 gem "jekyll"
 gem "jekyll-assets"
-gem "jekyll-paginate-v2"
+gem "jekyll-paginate-v2", '2.0.0'
 gem "jekyll-sitemap"
 gem "jemoji"
 gem "mini_magick"
