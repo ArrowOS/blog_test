@@ -7,6 +7,26 @@ set -e
 
 echo "Started deploying"
 
+# Check if we are already on gh-pages branch
+cur_branch=`git branch | awk 'NR==1{print $2; exit}'`
+if [ "$cur_branch" = "gh-pages" ]; then
+  git checkout arrow
+fi
+
+i=1
+changes=`git ls-remote gerrit | grep '/changes/' | awk 'NR=='$i'{print $2;}'`
+echo "$changes"
+
+while [ "$changes" != "" ]; do
+  echo "$changes" | grep -q "meta"
+  if [ $? != 0 ]; then
+    git fetch gerrit "$changes" && git cherry-pick FETCH_HEAD
+    echo "applied change $changes"
+  fi
+  i=$((i+1))
+  changes=`git ls-remote gerrit | grep '/changes/' | awk 'NR=='$i'{print $2;}'`
+done
+
 # Checkout gh-pages branch.
 if [ `git branch | grep gh-pages` ]
 then
@@ -26,7 +46,7 @@ rm -R _site/
 # Push to gh-pages.
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-git push -f -q origin gh-pages
+git push -f -q gerrit refs/heads/gh-pages
 
 # Move back to previous branch.
 git checkout -
