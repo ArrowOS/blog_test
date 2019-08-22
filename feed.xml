@@ -1,20 +1,74 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>ArrowOS</title>
+    <description></description>
+    <link>https://blog.arrowos.net</link>
+    <atom:link href="https://blog.arrowos.net/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>A new approach, how-to and benefits to the contributors and welcoming a new face to the CORE!</title>
+        <description>All about the projects new strategy and focus.</description>
+        <pubDate>Tue, 23 Jul 2019 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/a-new-approach</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/a-new-approach</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Changelogs 9.x(PIE)</title>
+        <description>This post is updated regularly || Last updated on: 13th June, 2019</description>
+        <pubDate>Sun, 21 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/changelogs-9-x</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/changelogs-9-x</guid>
+      </item>
+    
+      <item>
+        <title>Where are the features?</title>
+        <description>This is a pathmap to all the features available in the rom</description>
+        <pubDate>Mon, 15 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/where-are-the-features</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/where-are-the-features</guid>
+      </item>
+    
+      <item>
+        <title>How to submit patches to ArrowOS Gerrit</title>
+        <description>This guide helps you on how to start contributing to the project</description>
+        <pubDate>Mon, 15 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/gerrit-guide</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/gerrit-guide</guid>
+      </item>
+    
+      <item>
+        <title>How to compile ArrowOS from source</title>
+        <description>guide on how to compile rom from source</description>
+        <pubDate>Sun, 14 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/compilation-guide</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/compilation-guide</guid>
+      </item>
+    
+      <item>
+        <title>Changelogs 8.x(OREO)</title>
+        <description>This post is not updated anymore [DISCONTINUED], please refer to newer version</description>
+        <pubDate>Sun, 14 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/changelogs-8-x</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/changelogs-8-x</guid>
+      </item>
+    
+      <item>
+        <title>Apply For Maintainership</title>
+        <description></description>
+        <pubDate>Sun, 14 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/apply-for-maintainership</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/apply-for-maintainership</guid>
+      </item>
+    
+      <item>
+        <title>What is ArrowOS?</title>
+        <description>ArrowOS is an AOSP based project started with the aim of keeping things simple, clean and neat. We added just the right and mostly used stuff that will be actually USEFUL at the end of the day, aiming to deliver smooth performance with better battery life</description>
+        <pubDate>Fri, 12 Oct 2018 00:00:00 +0200</pubDate>
+        <link>https://blog.arrowos.net/posts/what-is-arrowos</link>
+        <guid isPermaLink="true">https://blog.arrowos.net/posts/what-is-arrowos</guid>
+      </item>
+    
   </channel>
 </rss>
